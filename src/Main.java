@@ -4,10 +4,10 @@ public class Main {
         System.out.println();
         System.out.println("Задача №1.");
         int yearToCheck = 2003;
-        checkLearYear(yearToCheck);
+        checkForALearYear(yearToCheck);
     }
 
-    public static void checkLearYear(int year) {
+    public static void checkForALearYear(int year) {
         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
             System.out.println(year + "  год — високосный год.");
         } else {
@@ -21,15 +21,15 @@ public class Main {
         checkDeviceClient(clientDeviceOs, clientDeviceYear);
     }
 
-    public static void checkDeviceClient(int deviceOs, int deviceYear) {
-        if (deviceOs == 0) {
-            if (deviceYear < 2015) {
+    public static void checkDeviceClient(int ClientDeviceOs, int ClientDeviceYear) {
+        if (ClientDeviceOs == 0) {
+            if (ClientDeviceYear < 2015) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             } else {
                 System.out.println("Установите обычную версию приложения для iOS по ссылке");
             }
-        } else if (deviceOs == 1) {
-            if (deviceYear < 2015) {
+        } else if (ClientDeviceOs == 1) {
+            if (ClientDeviceYear < 2015) {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
             } else {
                 System.out.println("Установите обычную версию приложения для Android по ссылке");
@@ -43,6 +43,7 @@ public class Main {
         int deliveryDistance = 5;
         distanceTime(deliveryDistance);
     }
+
     public static void distanceTime(int km) {
         if (km <= 20) {
             System.out.println("Потребуется дней:1, срок доставки.");
